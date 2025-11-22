@@ -31,13 +31,13 @@ Sistem ini terdiri dari 3 microservices:
 │ Port: 8761      │
 └────────┬────────┘
          │
-         ├─────────────────┬─────────────────┐
-         │                 │                 │
-┌────────▼────────┐ ┌──────▼──────┐ ┌──────▼──────┐
-│ Item Service    │ │ Order       │ │ (Future     │
-│ Port: 8080      │ │ Service     │ │  Services)  │
-│                 │ │ Port: 8081  │ │             │
-└─────────────────┘ └─────────────┘ └─────────────┘
+         ├─────────────────┬
+         │                 │                
+┌────────▼────────┐ ┌──────▼──────┐
+│ Item Service    │ │ Order       │
+│ Port: 8080      │ │ Service     │
+│                 │ │ Port: 8081  │
+└─────────────────┘ └─────────────┘
          │                 │
          └────────┬────────┘
                   │
@@ -433,8 +433,6 @@ geli-assessment-test/
 3. **Port Conflicts:** Pastikan port 8761, 8080, dan 8081 tidak digunakan oleh aplikasi lain
 4. **Timezone:** Aplikasi menggunakan timezone `Asia/Jakarta`
 
-## 🐛 Troubleshooting
-
 ### Service tidak terdaftar di Eureka
 - Pastikan Eureka Service sudah berjalan
 - Cek konfigurasi `eureka.client.service-url.defaultZone` di application.properties
@@ -448,12 +446,4 @@ geli-assessment-test/
 ### Port Already in Use
 - Cek aplikasi yang menggunakan port tersebut
 - Ubah port di application.properties jika diperlukan
-
-## 📧 Contact
-
-Untuk pertanyaan atau support, silakan hubungi: myboost.co
-
----
-
-**Happy Coding! 🚀**
 
